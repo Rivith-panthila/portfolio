@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #D1CECE;
+    font-family: Arial, sans-serif;
+}
+
+
+.navi {
+    display: flex;
+    justify-content:center;
+    margin-top: 20px;
+    
+}
+
+
+.navibar {
+    background: linear-gradient(to right, 1F 1F 1F 0.2, 1F 1F 1F 0.2);
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+    margin: 0 10px 0 10px;
+}
+
+
+.navlist {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+
+.navlist li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: block;
+    transition: 0.3s;
+}
+
+
+.navlist li a:hover {
+    background: rgb(255, 255, 255);
+}
+
+
+.navlist li:first-child a {
+    background: white;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.name{
+    font-family: "Inria Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 96px;
+
+}
