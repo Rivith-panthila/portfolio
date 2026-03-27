@@ -1,63 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    background: #D1CECE;
-    font-family: Arial, sans-serif;
-}
-
-
-.navi {
+    background: linear-gradient(135deg, #9bb7d4, #c5d6e8);
+    height: 100vh;
     display: flex;
-    justify-content:center;
-    margin-top: 20px;
-    
-}
-
-
-.navibar {
-    background: linear-gradient(to right, 1F 1F 1F 0.2, 1F 1F 1F 0.2);
-    padding: 10px;
-    border-radius: 50px;
-    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
-    margin: 0 10px 0 10px;
-}
-
-
-.navlist {
-    list-style: none;
-    display: flex;
-    gap: 10px;
-    margin: 0;
-    padding: 0;
     justify-content: center;
+    align-items: center;
 }
 
-
-.navlist li a {
-    text-decoration: none;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 30px;
-    display: block;
-    transition: 0.3s;
+/* Hero Card */
+.hero {
+    width: 98%;
+    height: 96vh;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    padding: 20px 40px;
 }
 
-
-.navlist li a:hover {
-    background: rgb(255, 255, 255);
+/* Navbar */
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
 }
 
+.navbar li {
+    padding: 8px 18px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.6);
+    cursor: pointer;
+    font-size: 14px;
+}
 
-.navlist li:first-child a {
+.navbar .active {
     background: white;
     font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.name{
-    font-family: "Inria Sans", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 96px;
+/* Content */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+}
 
+/* Text */
+.text h1 {
+    font-size: 60px;
+}
+
+.text h2 {
+    font-size: 45px;
+    margin-top: 10px;
+}
+
+.subtitle {
+    margin-top: 20px;
+    font-size: 28px;
+    font-family: "Times New Roman", serif;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    background: white;
+}
+
+.hire {
+    font-weight: bold;
+}
+
+/* Image */
+.image img {
+    width: 350px;
+    border-radius: 10px;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Bubble base style */
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: rgb(43, 43, 85);
+    filter: blur(60px);
+    z-index: 0;
+}
+
+/* Bubble 1 */
+.bubble1 {
+    width: 250px;
+    height: 250px;
+    top: -50px;
+    left: -50px;
+}
+
+/* Bubble 2 */
+.bubble2 {
+    width: 300px;
+    height: 300px;
+    bottom: -80px;
+    right: -80px;
+}
+
+/* content eka bubbles uda enne nathuwa */
+.navbar, .content {
+    position: relative;
+    z-index: 2;
+}
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+
+    /* magic sauce 🪄 */
+    background: rgba(255, 255, 255, 0.4);
+    filter: blur(45px);
+}
+
+/* bubble 1 */
+.bubble1 {
+    width: 250px;
+    height: 250px;
+    top: -60px;
+    left: -60px;
+}
+
+/* bubble 2 */
+.bubble2 {
+    width: 300px;
+    height: 300px;
+    bottom: -100px;
+    right: -100px;
 }
