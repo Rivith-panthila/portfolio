@@ -237,7 +237,7 @@ body {
     overflow: hidden;
     width: 100%;
     position: absolute;
-    bottom:5%;
+    bottom:-3%;
 }
 
 .marquee-track {
@@ -282,3 +282,30 @@ body {
 #type {
     animation: blink 0.7s infinite;
 }
+
+
+
+
+
+
+/*========================================== media quaries responsive web=================================== */
+
+@media (min-width: 1600px) {
+    .hero-text h1 {
+        font-size: 100px; 
+    }
+    
+    .animated-text {
+        font-size: 50px;
+    }
+    
+    .marquee-track h1 {
+        bottom: -10%;
+        font-size: 100px; 
+    }
+
+    .hero-buttons{
+        font-size: 25px;
+    }
+}
+
