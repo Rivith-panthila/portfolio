@@ -4,43 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="normalize" href="assets/normalize.css">
+
+    <!-- Normalize -->
+    <link rel="stylesheet" href="assets/normalize.css">
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100..900&family=Italiana&display=swap" rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
+
 <body>
 
-    <section class="hero">
-        <div class="bubble bubble1"></div>
-    <div class="bubble bubble2"></div>
-
-        <!-- Navbar -->
-        <nav class="navbar">
-            <ul>
-                <li class="active">Home</li>
-                <li>About Me</li>
-                <li>Education & Experience</li>
-                <li>Skills</li>
-                <li>Projects</li>
-                <li>Contact Me</li>
-            </ul>
+    <!-- ========== navigation bar========== -->
+    <header class="header">
+        <nav class="nav">
+            <div class="container nav-container">
+                <ul class="nav-list">
+                    <li><a href="#" >Home</a></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Education & Exercises</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact Me</a></li>
+                </ul>
+            </div>
         </nav>
+    </header>
 
-        <!-- Content -->
-        <div class="content">
-            <div class="text">
-                <h1>HI,</h1>
-                <h2>I’M Rivith Panthila</h2>
-                <p class="subtitle">Software Engineer & UI/UX Designer</p>
+    <!-- ========== hero section ========== -->
+    <section class="hero">
 
-                <div class="buttons">
-                    <button class="btn">Download CV ⬇</button>
-                    <button class="btn hire">Hire Me</button>
+        <!-- bubbles -->
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+
+        <div class="container hero-container">
+
+            <!-- glass effect eka -->
+            <div class="hero-glass">
+
+                <div class="hero-wrapper">
+
+                    <!-- left content -->
+                    <div class="hero-text">
+                        <h1>
+                            Hi, <br>
+                            I'm <span>Rivith Panthila</span>
+                        </h1>
+
+                        <div class="animated-text">
+                            <p>Back End Developer</p>
+                        </div>
+
+                        <div class="hero-buttons">
+                            <button class="btn cv-btn">Download CV</button>
+                            <button class="btn hire-btn">Hire Me</button>
+                        </div>
+                    </div>
+
+                    <!-- image -->
+                    <div class="hero-image">
+                        <img src="assets/images/home image.png" alt="profile image">
+                    </div>
+
                 </div>
+
+                <!-- marque -->
+                <div class="marquee">
+                    <div class="marquee-track">
+                        <h1>Software Engineer  &  UI / UX Designer  </h1>
+                        
+
+                        
+                    </div>
+                </div>
+
             </div>
 
-            <div class="image">
-                <img src="assets/images/Untitled design.png" alt="profile">
-            </div>
         </div>
 
     </section>
