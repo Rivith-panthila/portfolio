@@ -661,13 +661,19 @@ body {
     font-size: 50px;
     font-weight: 800;
     margin-bottom: 25px;
-    font-family: 'Public Sans', sans-serif;
+    font-family: 'abril fatface',regular;
+    color: #000;
+    text-align: center;
+    padding-bottom: 0px;
 }
 
 .skills-left p {
     font-size: 18px;
     line-height: 1.8;
     color: #444;
+    text-align: center;
+    margin-top: 100px;
+    padding-top: -100px;
 }
 
 .skills-right {
@@ -676,9 +682,105 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-top: 120px;
 }
 
 
+.main-circle {
+    width: 450px;
+    height: 450px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-icon {
+    position: absolute;
+    width: 65px; 
+    height: 65px;
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    padding: 12px;
+}
+
+
+.skill-icon img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.skill-icon:hover {
+    transform: scale(1.2) rotate(5deg);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+
+.icon-html   { top: 20%; left: 10%; }
+.icon-fx     { top: 5%; left: 45%; }
+.icon-figma  { top: 15%; right: 5%; }
+.icon-python { top: 45%; left: 55%; width: 90px; height: 90px; } /* මැද හරියට වෙන්න ලොකුවට */
+.icon-psql   { top: 40%; right: -5%; }
+.icon-mysql  { bottom: 35%; left: -5%; }
+.icon-java   { bottom: 10%; right: 5%; }
+.icon-js     { bottom: -5%; right: 40%; }
+.icon-css    { bottom: 5%; left: 15%; }
+
+@keyframes moveRandom {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(15px, -15px); }
+    50% { transform: translate(-10px, 15px); }
+    75% { transform: translate(-15px, -10px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* හැම Icon එකකටම මේ animation එක දාන්න */
+.skill-icon {
+    position: absolute;
+    animation: moveRandom 8s linear infinite; /* තත්පර 8ක් පුරා හෙමින් සිදුවේ */
+}
+
+.icon-html   { animation-duration: 7s;  animation-delay: 0.2s; }
+.icon-css    { animation-duration: 9s;  animation-delay: 0.5s; }
+.icon-js     { animation-duration: 6s;  animation-delay: 1s;   }
+.icon-python { animation-duration: 10s; animation-delay: 0.1s; } /* මැද එක හෙමින් */
+.icon-java   { animation-duration: 8s;  animation-delay: 1.5s; }
+.icon-mysql  { animation-duration: 11s; animation-delay: 0.3s; }
+.icon-figma  { animation-duration: 7.5s; animation-delay: 0.8s; }
+.icon-fx     { animation-duration: 9.5s; animation-delay: 1.2s; }
+.icon-psql   { animation-duration: 8.5s; animation-delay: 0.4s; }
+
+
+@keyframes moveRandom {
+    0% { 
+        transform: translate(0, 0) rotate(0deg); 
+    }
+    25% { 
+        /* දකුණට 40px සහ උඩට 40px */
+        transform: translate(30px, -30px) rotate(10deg); 
+    }
+    50% { 
+        /* වමට 30px සහ පල්ලෙහාට 50px */
+        transform: translate(-20px, 40px) rotate(-10deg); 
+    }
+    75% { 
+        /* වමට 45px සහ උඩට 25px */
+        transform: translate(-35px, -45px) rotate(5deg); 
+    }
+    100% { 
+        transform: translate(0, 0) rotate(0deg); 
+    }
+}
 
 
 
