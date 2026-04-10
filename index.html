@@ -180,14 +180,17 @@
         <div class="bubble bubble-2"></div>
 
         <section class="hero-glass">
-           <div class="container">
+           <div class="educontainer">
         
         <div class="tab-buttons">
-            <button class="tab-btn active">Education</button>
-            <button class="tab-btn">Experience</button>
+            <button class="tab-btn active" onclick="openTab(event, 'education-content')">Education</button>
+            <button class="tab-btn" onclick="openTab(event, 'experience-content')">Experience</button>
+
         </div>
 
-        <div class="education-grid">
+        <div id="education-content" class="tab-content active-content">
+
+            <div class="education-grid">
             
             <div class="edu-card">
                 <div class="edu-header">
@@ -233,6 +236,27 @@
             </div>
 
         </div>
+
+        </div>
+
+        <div id="experience-content" class="tab-content">
+                <div class="education-grid">
+                    <div class="edu-card">
+                        <div class="edu-header">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <span class="year">2025 - Present</span>
+                        </div>
+                        <div class="edu-body">
+                            <h3>Software Engineer & UI/UX Designer</h3>
+                            <p>Freelance Projects & Full-Stack Development</p>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+
+        
+
+
     </div>
             
             
