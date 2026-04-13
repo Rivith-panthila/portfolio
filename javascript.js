@@ -172,3 +172,25 @@ function resetInterval() {
 
 
 updateGallery();
+
+
+
+
+
+
+
+const hamburger = document.getElementById('hamburger');
+const navList = document.querySelector('.nav-list'); // nav-links වෙනුවට nav-list ගන්න
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navList.classList.toggle('active');
+});
+
+// Menu එකේ link එකක් click කළාම menu එක auto-close වෙන්න
+document.querySelectorAll('.nav-list li a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navList.classList.remove('active');
+    });
+});

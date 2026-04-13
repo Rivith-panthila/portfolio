@@ -193,6 +193,9 @@ body {
     margin: 30px 0;
     font-size: 38px;
     color: #ffffff;
+    min-height: 50px; 
+    display: flex;
+    align-items: center;
 }
 
 /* ===== btton========= */
@@ -1105,6 +1108,268 @@ body {
 /* footer */
 
 
+#contact {
+    padding: 100px 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+    background: transparent; 
+}
+
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    font-family: 'koulen', regular;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+.contact-card {
+    width: 100%;
+    max-width: 900px; /* Card එකේ පළල */
+    margin: 0 auto 50px auto;
+    
+    /* පරණ design එකේ Glassmorphism Styles */
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    padding: 45px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+
+.input-row {
+    display: flex;
+    gap: 20px; /* First Name සහ Last Name අතර පරතරය */
+    margin-bottom: 20px;
+}
+
+.input-group {
+    flex: 1; /* Input එකට ඉඩ ලබා දීමට */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.input-row .input-group {
+    margin-bottom: 0; /* Row එකක් ඇතුළේදී යට margin එක අයින් කරන්න */
+}
+
+.input-group label {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent inputs */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 1rem;
+    color: #000;
+    transition: 0.3s;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: #666;
+}
+
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.8);
+    border-color: #fff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+
+.input-group textarea {
+    resize: none; /* User ට ඇදලා උස වෙනස් කරන්න බැරි කිරීමට */
+}
+
+
+.btn-container {
+    display: flex;
+    justify-content: center; /* Button එක මැදට ගැනීමට */
+    margin-top: 10px;
+}
+
+.send-btn {
+    background: #02A4D9; /* Design එකේ තියෙන නිල් පාට */
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-family: 'Public Sans', sans-serif;
+    box-shadow: 0 5px 15px rgba(2, 164, 217, 0.3);
+}
+
+.send-btn:hover {
+    background: #028fc0; /* Hover කරද්දී පොඩ්ඩක් තද වෙනවා */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(2, 164, 217, 0.4);
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+    color: #000;
+}
+
+.info-item i {
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.footer {
+    width: 100%;
+    margin-top: 40px;
+    padding: 0; /* padding අයින් කරන්න */
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden; /* Glasseffect එක එළියට පනින එක නතර කිරීමට */
+    z-index: 99;
+}
+
+.footer .footer-content {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* සියල්ල මැදට (Center) ගැනීමට */
+    justify-content: center;
+    text-align: center;
+}
+
+/* --- මැද තියෙන Social Section එක --- */
+.social-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer h3 {
+    font-family: 'assistant', regular;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #000;
+}
+
+.social-icons {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.social-icons a {
+    font-size: 1.8rem;
+    color: #333;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #02A4D9;
+    transform: translateY(-5px);
+}
+
+/* --- දකුණු පැත්තේ කෙළවරටම යන Did You Know එක --- */
+.did-you-know {
+    position: absolute;
+    right: 40px;
+    top: 50%; /* මැදට align කිරීමට */
+    transform: translateY(-50%); /* හරියටම මැදට ගැනීමට */
+    max-width: 250px;
+    text-align: right;
+    padding-top: 22px;
+}
+
+.did-you-know p {
+    font-size: 0.85rem;
+    color: #000000;
+    line-height: 1.4;
+    margin: 3px 0;
+}
+
+/* Copyright එක යටින් මැදටම */
+.copyright {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 40px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.footer .footer-content {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative; /* absolute දාපු did-you-know එක මේකට සාපේක්ෂව පවතී */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* navbar hamburger */
+
+
+
+.hamburger {
+    display: none; /* Desktop එකේදී පේන්නේ නැහැ */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    z-index: 1001;
+}
+
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
 
 
 
@@ -1114,22 +1379,297 @@ body {
 
 /*========================================== media quaries responsive web=================================== */
 
-@media (min-width: 1600px) {
-    .hero-text h1 {
-        font-size: 100px; 
-    }
+@media screen and (max-width: 850px) {
     
-    .animated-text {
-        font-size: 50px;
-    }
-    
-    .marquee-track h1 {
-        bottom: -10%;
-        font-size: 100px; 
+
+    /* ===== GLOBAL ===== */
+    .container {
+        padding: 0 20px;
     }
 
-    .hero-buttons{
-        font-size: 25px;
+    .marquee {
+        display: none;
+    }
+
+    .hero-glass {
+        margin-bottom: 20px;
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 40px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .animated-text {
+        min-height: 40px;
+        font-size: 15px;
+        margin: 15px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 120px 0 60px;
+    }
+
+    .hero-text {
+        position: static;
+        transform: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(32px, 8vw, 48px);
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .cv-btn,
+    .hire-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        margin-left: 100px;
+    }
+
+    .hero-image img {
+        position: static;
+        width: 90%;
+        max-width: 320px;
+        height: auto;
+        margin-top: 30px;
+    }
+
+    /* ===== ABOUT ===== */
+    .about-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .left-div {
+        order: 1;
+        margin-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .image-container {
+        width: 240px;
+        height: 280px;
+    }
+
+    .image-circle {
+        width: 240px;
+        height: 240px;
+    }
+
+    .right-div {
+        order: 2;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .whoami {
+        font-size: 34px;
+        margin-bottom: 20px;
+        padding-left: 0;
+    }
+
+    .part1,
+    .part2 {
+        font-size: 16px;
+        line-height: 1.6;
+        padding: 0 15px;
+        margin-top: 10px;
+    }
+
+    .panel {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .socials {
+        font-size: 2.5rem;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        margin-left: 0;
+    }
+
+    .btn1,
+    .btn2 {
+        width: 100%;
+    }
+
+    /* ===== SKILLS ===== */
+    .skills-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .skills-right {
+        margin-top: 20px;
+        transform: scale(0.75);
+    }
+
+    .skills-left h2 {
+        font-size: 36px;
+        margin-top: -40px;
+    }
+
+    /* ===== GALLERY ===== */
+    #gallery {
+        padding: 40px 0;
+        overflow: hidden;
+    }
+
+    .gallery-wrapper {
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gallery-slider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gallery-card {
+        width: 280px;
+        height: 200px;
+        position: absolute;
+        opacity: 0;
+        transform: scale(0.9);
+        transition: all 0.5s ease-in-out;
+        border-radius: 20px;
+    }
+
+    .gallery-card.active {
+        opacity: 1;
+        transform: scale(1);
+        z-index: 10;
+        position: relative;
+    }
+
+    .gallery-card.prev-card {
+        opacity: 0.4;
+        transform: translateX(-150px) scale(0.8);
+    }
+
+    .gallery-card.next-card {
+        opacity: 0.4;
+        transform: translateX(150px) scale(0.8);
+    }
+
+    #my1,
+    #my2,
+    #my3,
+    #my4 {
+        border-radius: 20px;
+        object-fit: cover;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact-card {
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .did-you-know {
+        position: static;
+        transform: none;
+        text-align: center;
+        margin: 30px auto;
+        padding-top: 20px;
+        border-top: 1px solid rgba(0,0,0,0.1);
     }
 }
 
+
+/* ===== EXTRA SMALL ===== */
+@media screen and (max-width: 400px) {
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .nav-list li a {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .image-container,
+    .image-circle {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+
+
+@media screen and (max-width: 1160px) {
+
+    .nav-container {
+        justify-content: flex-end; 
+        padding: 0 20px;
+    }
+
+    .hamburger {
+        display: flex; 
+        position: relative;
+        z-index: 1001;
+    }
+
+
+    .nav-list {
+        position: fixed;
+        right: -100%; /* මුලින් screen එකෙන් එළියෙ තියෙන්නෙ */
+        top: 0;
+        height: 100vh;
+        width: 70%;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s ease-in-out;
+        z-index: 1000;
+    }
+
+
+    .nav-list.active {
+        right: 0; /* Menu එක click කළාම ඇතුළට එනවා */
+    }
+
+    .hamburger.active .bar:nth-child(2) { opacity: 0; }
+    .hamburger.active .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .hamburger.active .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+}    
