@@ -277,6 +277,10 @@ body {
     position: absolute;
     bottom: 0;
     right:5%;
+
+    max-width: 100%;
+    height: auto;
+    display: block;
    
 }
 
@@ -1416,7 +1420,7 @@ body {
 
     .animated-text {
         min-height: 40px;
-        font-size: 15px;
+        font-size: 10px;
         margin: 15px 0;
         display: flex;
         justify-content: center;
@@ -1638,6 +1642,8 @@ body {
         font-size: 13px;
     }
 
+    
+
     .image-container,
     .image-circle {
         width: 220px;
@@ -1687,5 +1693,39 @@ body {
 
 
 }    
+
+
+@media screen and (max-width: 320px) {
+    .hero-text h1 { font-size: 30px; }
+    .animated-text { font-size: 18px; }
+    .hero-buttons { width: 100%; }
+    .cv-btn, .hire-btn { width: 200px; font-size: 16px; }
+    .hero-image img { height: 220px; }
+    .hero-glass { border-radius: 15px; }
+}
+
+
+@media (max-width: 768px) {
+    .hero-wrapper {
+        flex-direction: column-reverse; /* Text eka uda image eka yata danna */
+        text-align: center;
+        gap: 20px;
+    }
+
+    .hero-image img {
+        width: 80%; /* Mobile waladi image eka poddak podi karanna */
+        margin: 0 auto;
+    }
+
+
+    .hero-buttons{
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        align-items: center;
+        padding-right: 80px;
+    }
+
+}   
 
 
