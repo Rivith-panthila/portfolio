@@ -1365,6 +1365,10 @@ body {
     align-items: center;
 }
 
+#tech-fact {
+    transition: opacity 0.5s ease-in-out;
+}
+
 
 /* navbar hamburger */
 
@@ -1663,8 +1667,8 @@ body {
         
 
         .educontainer{
-            width: 100%;
-            heuight: auto;
+            width: 80%;
+            height: auto;
         }
     
         
@@ -1722,6 +1726,8 @@ body {
     .hero-image img { height: 220px; }
     .hero-glass { border-radius: 15px; }
     .buttons{width: 100%;}
+    .educontainer{width: 80%; height: auto; margin-right: 50px;}
+    .edu-card{width: 70%; padding-right:1.5rem;}
 }
 
 

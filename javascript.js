@@ -194,3 +194,32 @@ document.querySelectorAll('.nav-list li a').forEach(link => {
         navList.classList.remove('active');
     });
 });
+
+
+
+
+const facts = [
+    "Alan Turing laid the foundation for modern computing and Artificial Intelligence.",
+    "The first computer programmer was a woman named Ada Lovelace.",
+    "The first computer bug was an actual moth found trapped in a relay.",
+    "Python was named after the comedy group 'Monty Python', not the snake.",
+    "MySQL's 'My' is named after co-founder Michael Widenius's daughter.",
+    "The first website ever built is still online today (info.cern.ch)."
+];
+
+let factIndex = 0;
+const factElement = document.getElementById('tech-fact');
+
+function updateFact() {
+    // Fade out effect ekak danna puluwan (CSS transition ekka)
+    factElement.style.opacity = 0;
+    
+    setTimeout(() => {
+        factIndex = (factIndex + 1) % facts.length;
+        factElement.textContent = facts[factIndex];
+        factElement.style.opacity = 1;
+    }, 500);
+}
+
+// Thappara 7kata parak fact eka change wenna
+setInterval(updateFact, 7000);
