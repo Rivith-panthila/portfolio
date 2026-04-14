@@ -1652,13 +1652,19 @@ body {
     }
 
         .whoami {
-            font-size: 24px;
+            font-size: 28px;
             margin-bottom: 20px;
             padding-left: 0;
         }
 
         .panel{
             padding-right: 100px;
+        }
+        
+
+        .educontainer{
+            width: 100%;
+            heuight: auto;
         }
     
         
