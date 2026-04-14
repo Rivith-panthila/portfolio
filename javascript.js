@@ -223,3 +223,67 @@ function updateFact() {
 
 // Thappara 7kata parak fact eka change wenna
 setInterval(updateFact, 7000);
+
+
+
+
+
+
+
+
+// Contact Form Submission Logic
+const contactForm = document.getElementById("my-form");
+
+async function handleSubmit(event) {
+    event.preventDefault();
+    const status = document.getElementById("form-status");
+    const btn = document.getElementById("status-btn");
+    const data = new FormData(event.target);
+
+    // Button eka disable karanna message eka yana athara
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+    fetch(event.target.action, {
+        method: contactForm.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        status.style.display = "block";
+        if (response.ok) {
+            // Success Notification
+            status.style.backgroundColor = "rgba(40, 167, 69, 0.2)"; 
+            status.style.color = "#28a745";
+            status.style.border = "1px solid #28a745";
+            status.innerHTML = "<strong>Success!</strong> Your message has been sent.";
+            contactForm.reset(); // Form eka clear karanna
+        } else {
+            // Error Notification
+            response.json().then(data => {
+                status.style.backgroundColor = "rgba(220, 53, 69, 0.2)";
+                status.style.color = "#dc3545";
+                status.innerHTML = "<strong>Oops!</strong> There was a problem.";
+            });
+        }
+    }).catch(error => {
+        status.style.display = "block";
+        status.style.backgroundColor = "rgba(220, 53, 69, 0.2)";
+        status.innerHTML = "<strong>Error!</strong> Please check your internet connection.";
+    }).finally(() => {
+        btn.disabled = false;
+        btn.innerText = "Send Message";
+        
+        // Thappara 5kin message eka hide karanna
+        setTimeout(() => { 
+            status.style.opacity = '0';
+            setTimeout(() => { 
+                status.style.display = "none"; 
+                status.style.opacity = '1';
+            }, 500);
+        }, 5000);
+    });
+}
+
+contactForm.addEventListener("submit", handleSubmit);
