@@ -1648,7 +1648,16 @@ body {
     .image-circle {
         width: 220px;
         height: 220px;
+        margin-bottom: 5px;
     }
+
+        .whoami {
+            font-size: 28px;
+            margin-bottom: 20px;
+            padding-left: 0;
+        }
+    
+        
 }
 
 
