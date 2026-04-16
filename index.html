@@ -19,12 +19,15 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Allkin&family=Fuzzy+Bubbles:wght@400;700&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Italiana&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Allkin&family=Fuzzy+Bubbles:wght@400;700&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Italiana&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allkin&family=Fuzzy+Bubbles:wght@400;700&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Italiana&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allkin&family=Fuzzy+Bubbles:wght@400;700&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Italiana&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -89,7 +92,7 @@
                     </div>
 
                     <!-- image -->
-                    <div class="hero-image">
+                    <div class="hero-image" >
                         <img src="assets/images/home image.png" alt="profile image">
                     </div>
 
@@ -122,7 +125,7 @@
 
 
                     <div class="left-div">
-                        <div class="image-container">
+                        <div class="image-container" data-aos="fade-left" data-aos-delay="290">
 
                         <div class="image-circle">
 
@@ -133,24 +136,24 @@
 
                 <div class="right-div">
 
-                    <div class="whoami">
+                    <div class="whoami" data-aos="fade-down" data-aos-delay="290">
 
                         <h1>WHO AM I ? </h1>
 
                     </div>
 
                     <div class="introduction">
-                        <div class="part1">
+                        <div class="part1" data-aos="fade-left" data-aos-delay="290">
                             I’m <span>Rivith Panthila</span>, a Software Engineer Student  who believes great code is more than logic, it’s about creating experiences that matter. I thrive on solving problems, building efficient systems, and continuously pushing my limits.
 
                         </div>
 
-                        <div class="part2">
+                        <div class="part2" data-aos="fade-right" data-aos-delay="290">
                             I’m deeply interested in modern technologies and enjoy experimenting with new ideas that challenge the ordinary. For me, every project is an opportunity to learn, grow, and create something meaningful.
 
                         </div>
 
-                        <div class="panel">
+                        <div class="panel" data-aos="zoom-in">
  
                             <a href="https://www.facebook.com/share/1BJRsbfVEC/" class="socials" id="facebook"><iconify-icon icon="ic:baseline-facebook" ></iconify-icon> </a>
                             <a href="linkedin.com/in/rivith-panthila-2453b3395" class="socials" id="linkedin"><iconify-icon icon="mdi:linkedin" ></iconify-icon> </a>
@@ -198,7 +201,7 @@
 
             <div class="education-grid">
             
-            <div class="edu-card">
+            <div class="edu-card" data-aos="fade-right">
                 <div class="edu-header">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <span class="year">2015-2023</span>
@@ -209,7 +212,7 @@
                 </div>
             </div>
 
-            <div class="edu-card">
+            <div class="edu-card" data-aos="fade=left">
                 <div class="edu-header">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <span class="year">2023-2025</span>
@@ -220,7 +223,7 @@
                 </div>
             </div>
 
-            <div class="edu-card">
+            <div class="edu-card"data-aos="fade-right">
                 <div class="edu-header">
                     <i class="fa-solid fa-graduation-cap"></i>
                 </div>
@@ -230,7 +233,7 @@
                 </div>
             </div>
 
-            <div class="edu-card">
+            <div class="edu-card" data-aos="fade-left">
                 <div class="edu-header">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <span class="year">2025-Present</span>
@@ -284,8 +287,8 @@
         <div class="skills-wrapper">
             
             <div class="skills-left">
-                <h2 class="section-title">My Skills</h2>
-                <p class="skills-description">
+                <h2 class="section-title" data-aos="fade-down">My Skills</h2>
+                <p class="skills-description" data-aos="zoom-in">
                     I'm currently building my skills as a Software Engineer, focusing on core programming concepts and practical problem-solving. I'm continuously learning and improving through hands-on projects, exploring new technologies, and strengthening my understanding step by step.
                 </p>
             </div>
@@ -326,7 +329,7 @@
 
         <section class="hero-glass">
 
-            <div class="container">
+            <div class="container" data-aos="zoom-in">
         <h2 class="section-title">My Projects</h2>
 
         <div class="projects-wrapper">
@@ -583,5 +586,13 @@
 
 
     <script src="javascript.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
 </body>
 </html>
