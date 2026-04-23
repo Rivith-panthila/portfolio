@@ -1121,7 +1121,7 @@ body {
 }
 
 
-/* footer */
+
 
 
 #contact {
@@ -1150,10 +1150,10 @@ body {
 
 .contact-card {
     width: 100%;
-    max-width: 900px; /* Card එකේ පළල */
+    max-width: 900px; 
     margin: 0 auto 50px auto;
     
-    /* පරණ design එකේ Glassmorphism Styles */
+    
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -1166,19 +1166,19 @@ body {
 
 .input-row {
     display: flex;
-    gap: 20px; /* First Name සහ Last Name අතර පරතරය */
+    gap: 20px; 
     margin-bottom: 20px;
 }
 
 .input-group {
-    flex: 1; /* Input එකට ඉඩ ලබා දීමට */
+    flex: 1; 
     display: flex;
     flex-direction: column;
     margin-bottom: 25px;
 }
 
 .input-row .input-group {
-    margin-bottom: 0; /* Row එකක් ඇතුළේදී යට margin එක අයින් කරන්න */
+    margin-bottom: 0; 
 }
 
 .input-group label {
@@ -1733,13 +1733,13 @@ body {
 
 @media (max-width: 768px) {
     .hero-wrapper {
-        flex-direction: column-reverse; /* Text eka uda image eka yata danna */
+        flex-direction: column-reverse;
         text-align: center;
         gap: 20px;
     }
 
     .hero-image img {
-        width: 80%; /* Mobile waladi image eka poddak podi karanna */
+        width: 80%; 
         margin: 0 auto;
     }
 

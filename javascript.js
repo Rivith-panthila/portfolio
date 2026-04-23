@@ -180,7 +180,7 @@ updateGallery();
 
 
 const hamburger = document.getElementById('hamburger');
-const navList = document.querySelector('.nav-list'); // nav-links වෙනුවට nav-list ගන්න
+const navList = document.querySelector('.nav-list'); 
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
@@ -221,7 +221,7 @@ function updateFact() {
     }, 500);
 }
 
-// Thappara 7kata parak fact eka change wenna
+
 setInterval(updateFact, 7000);
 
 
@@ -258,7 +258,7 @@ async function handleSubmit(event) {
             status.style.color = "#28a745";
             status.style.border = "1px solid #28a745";
             status.innerHTML = "<strong>Success!</strong> Your message has been sent.";
-            contactForm.reset(); // Form eka clear karanna
+            contactForm.reset(); 
         } else {
             // Error Notification
             response.json().then(data => {
@@ -275,7 +275,7 @@ async function handleSubmit(event) {
         btn.disabled = false;
         btn.innerText = "Send Message";
         
-        // Thappara 5kin message eka hide karanna
+        
         setTimeout(() => { 
             status.style.opacity = '0';
             setTimeout(() => { 
