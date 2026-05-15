@@ -187,7 +187,7 @@ hamburger.addEventListener('click', () => {
     navList.classList.toggle('active');
 });
 
-// Menu එකේ link එකක් click කළාම menu එක auto-close වෙන්න
+
 document.querySelectorAll('.nav-list li a').forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
@@ -211,7 +211,7 @@ let factIndex = 0;
 const factElement = document.getElementById('tech-fact');
 
 function updateFact() {
-    // Fade out effect ekak danna puluwan (CSS transition ekka)
+    
     factElement.style.opacity = 0;
     
     setTimeout(() => {
@@ -240,7 +240,7 @@ async function handleSubmit(event) {
     const btn = document.getElementById("status-btn");
     const data = new FormData(event.target);
 
-    // Button eka disable karanna message eka yana athara
+    
     btn.disabled = true;
     btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
 
@@ -253,7 +253,7 @@ async function handleSubmit(event) {
     }).then(response => {
         status.style.display = "block";
         if (response.ok) {
-            // Success Notification
+            
             status.style.backgroundColor = "rgba(40, 167, 69, 0.2)"; 
             status.style.color = "#28a745";
             status.style.border = "1px solid #28a745";
@@ -287,3 +287,59 @@ async function handleSubmit(event) {
 }
 
 contactForm.addEventListener("submit", handleSubmit);
+
+// assignments
+
+function openLab(btn) {
+    const htmlCode = btn.getAttribute('data-html') || "";
+    const cssCode = btn.getAttribute('data-css') || "";
+    const jsCode = btn.getAttribute('data-js') || "";
+
+    document.getElementById("html-code").textContent = htmlCode;
+    document.getElementById("css-code").textContent = cssCode;
+    document.getElementById("js-code").textContent = jsCode;
+
+    document.getElementById("editor-view").classList.add("active");
+
+    updatePreview(htmlCode, cssCode, jsCode);
+}
+
+function updatePreview(html, css, js) {
+    const preview = document.getElementById("preview");
+
+    const srcDoc = `
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: sans-serif;
+}
+${css}
+</style>
+</head>
+
+<body>
+${html}
+
+<script>
+try {
+${js}
+} catch (err) {
+    console.error("JS Error:", err);
+}
+<\/script>
+
+</body>
+</html>
+`;
+
+    preview.srcdoc = srcDoc;
+}
+
+function closeLab() {
+    document.getElementById("editor-view").classList.remove("active");
+}

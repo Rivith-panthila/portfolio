@@ -50,7 +50,7 @@
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#">Assignments</a></li>
+                    <li><a href="#assignment">Assignments</a></li>
                     <li><a href="#contact">Contact Me</a></li>
                 </ul>
             </div>
@@ -464,7 +464,8 @@
                 </div>
 
 
-            </div> </div> <div class="dots-container" id="galleryDots"></div>
+            </div> </div> 
+            <div class="dots-container" id="galleryDots"></div>
     </div>
 
         </section>
@@ -476,6 +477,155 @@
 
 
     </section>
+    
+
+    <!-- assignment section -->
+
+    <section class="hero" id="assignment">
+         <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+
+        <section class="hero-glass">
+
+            
+                 <h2 class="section-title">My Assignments</h2>
+                  <main class="exercises-main-container">
+
+    <div id="gallery-view">
+
+        <!-- CARD 01 -->
+        <div class="ex-card">
+            <div class="card-content">
+                <span class="ex-badge">Exercise 01</span>
+                <span class="ex-title">Colorful Bento Grid Layout</span>
+                <span class="ex-desc">A vibrant CSS Grid layout with spanning columns and rows.</span>
+            </div>
+
+            <div class="card-footer">
+                <button class="ex-btn btn-github">GitHub</button>
+
+                <button class="ex-btn btn-preview"
+                    onclick="openLab(this)"
+                    data-html="<section><div></div><div></div><div></div><div></div></section>"
+                    data-css="section{width:100vw;height:100vh;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(3,1fr);} section > div{border:1px solid black;} section > div:nth-child(1){background:red;grid-column:1/3;} section > div:nth-child(2){background:green;} section > div:nth-child(3){background:orangered;grid-column:4/5;grid-row:1/4;} section > div:nth-child(4){background:purple;}"
+                    data-js="">
+                    Live Preview
+                </button>
+            </div>
+        </div>
+
+        <!-- CARD 02 -->
+        <div class="ex-card">
+            <div class="card-content">
+                <span class="ex-badge">Exercise 02</span>
+                <span class="ex-title">Sticky Header Sections</span>
+                <span class="ex-desc">Sticky headers that stack while scrolling.</span>
+            </div>
+
+            <div class="card-footer">
+                <button class="ex-btn btn-github">GitHub</button>
+
+                <button class="ex-btn btn-preview"
+                    onclick="openLab(this)"
+                    data-html="<section><header>Card 1</header><div>Hello</div></section><section><header>Card 2</header><div>How</div></section>"
+                    data-css="section{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;} header{position:sticky;top:0;background:red;padding:10px;color:white;}"
+                    data-js="">
+                    Live Preview
+                </button>
+            </div>
+        </div>
+
+        <!-- CARD 03 -->
+        <div class="ex-card">
+            <div class="card-content">
+                <span class="ex-badge">Exercise 03</span>
+                <span class="ex-title">Geometric Grid Layout</span>
+                <span class="ex-desc">Modern abstract grid design.</span>
+            </div>
+
+            <div class="card-footer">
+                <button class="ex-btn btn-github">GitHub</button>
+
+                <button class="ex-btn btn-preview"
+                    onclick="openLab(this)"
+                    data-html="<section><div></div><div></div><div></div><div></div><article></article></section>"
+                    data-css="section{width:100vw;height:100vh;display:grid;grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,1fr);position:relative;} section > div{position:relative;} section > div::after{content:'';width:150px;height:150px;background:white;border-radius:50%;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);} "
+                    data-js="">
+                    Live Preview
+                </button>
+            </div>
+        </div>
+
+        <!-- CARD 04 -->
+        <div class="ex-card">
+            <div class="card-content">
+                <span class="ex-badge">Exercise 04</span>
+                <span class="ex-title">Pulsating Ripple Effect</span>
+                <span class="ex-desc">CSS ripple animation.</span>
+            </div>
+
+            <div class="card-footer">
+                <button class="ex-btn btn-github">GitHub</button>
+
+                <button class="ex-btn btn-preview"
+                    onclick="openLab(this)"
+                    data-html="<section><div></div></section>"
+                    data-css="
+                    body{margin:0;height:100vh;display:flex;justify-content:center;align-items:center;}
+                     div{width:10px;height:10px;border-radius:50%;border:2px solid purple;animation: pulse 1s infinite;} 
+                     @keyframes pulse{from{transform:scale(1);opacity:1;}to{transform:scale(15);opacity:0;}
+                    }"
+                    data-js="">
+                    Live Preview
+                </button>
+            </div>
+        </div>
+
+    </div>
+</main>
+                 
+
+                
+
+                
+
+
+
+
+            
+
+        </section>
+
+
+    </section>
+
+    <div id="editor-view">
+        <button class="back-btn" onclick="closeLab()">Back</button>
+        <div class="editors-container">
+            <div class="apple-window">
+                <div class="win-header">
+                    <div class="dots"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+                    <span class="win-title">HTML</span>
+                </div>
+                <pre id="html-code"></pre>
+            </div>
+            <div class="apple-window">
+                <div class="win-header">
+                    <div class="dots"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+                    <span class="win-title">CSS</span>
+                </div>
+                <pre id="css-code"></pre>
+            </div>
+            <div class="apple-window">
+                <div class="win-header">
+                    <div class="dots"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+                    <span class="win-title">JS</span>
+                </div>
+                <pre id="js-code"></pre>
+            </div>
+        </div>
+        <iframe id="preview"></iframe>
+    </div>
 
 
 
@@ -497,22 +647,22 @@
                     <div class="input-row">
                         <div class="input-group">
                             <label for="first-name">First Name</label>
-                            <input type="text" id="first-name" placeholder="Enter your first name" name="first_name">
+                            <input type="text" id="first-name" placeholder="Enter your first name" name="first_name"required>
                         </div>
                         <div class="input-group">
                             <label for="last-name">Last Name</label>
-                            <input type="text" id="last-name" placeholder="Enter your last name" name="last_name">
+                            <input type="text" id="last-name" placeholder="Enter your last name" name="last_name"required>
                         </div>
                     </div>
 
                     <div class="input-group">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" placeholder="Enter your email address" name="email">
+                        <input type="email" id="email" placeholder="Enter your email address" name="email" required>
                     </div>
 
                     <div class="input-group">
                         <label for="message">Message/Comment</label>
-                        <textarea id="message" rows="5" placeholder="Write your message here..." name="message"></textarea>
+                        <textarea id="message" rows="5" placeholder="Write your message here..." name="message" required></textarea>
                     </div>
 
                     <div class="btn-container">
