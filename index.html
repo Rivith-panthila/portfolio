@@ -548,8 +548,35 @@
 
                 <button class="ex-btn btn-preview"
                     onclick="openLab(this)"
-                    data-html="<section><div></div><div></div><div></div><div></div><article></article></section>"
-                    data-css="section{width:100vw;height:100vh;display:grid;grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,1fr);position:relative;} section > div{position:relative;} section > div::after{content:'';width:150px;height:150px;background:white;border-radius:50%;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);} "
+                    data-html="<section>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <article></article>
+                    </section>"
+                    data-css="section{
+                        width:100vw;
+                        height:100vh;
+                        display:grid;
+                        grid-template-columns:repeat(2,1fr);
+                        grid-template-rows:repeat(2,1fr);
+                        position:relative;
+                    } 
+                    section > div{
+                        position:relative;
+                    } 
+                    section > div::after{
+                        content:'';
+                        width:150px;
+                        height:150px;
+                        background:white;
+                        border-radius:50%;
+                        position:absolute;
+                        top:50%;
+                        left:50%;
+                        transform:translate(-50%,-50%);
+                    } "
                     data-js="">
                     Live Preview
                 </button>
@@ -569,11 +596,33 @@
 
                 <button class="ex-btn btn-preview"
                     onclick="openLab(this)"
-                    data-html="<section><div></div></section>"
+                    data-html="<section>
+                                    <div></div>
+                                </section>"
                     data-css="
-                    body{margin:0;height:100vh;display:flex;justify-content:center;align-items:center;}
-                     div{width:10px;height:10px;border-radius:50%;border:2px solid purple;animation: pulse 1s infinite;} 
-                     @keyframes pulse{from{transform:scale(1);opacity:1;}to{transform:scale(15);opacity:0;}
+                    body{
+                        margin:0;
+                        height:100vh;
+                        display:flex;
+                        justify-content:center;
+                        align-items:center;
+                    }
+                     div{
+                        width:10px;
+                        height:10px;
+                        border-radius:50%;
+                        border:2px solid purple;
+                        animation: pulse 1s infinite; 
+                     } 
+                     @keyframes pulse{
+                        from{
+                            transform:scale(1);
+                            opacity:1;
+                        }
+                        to{
+                            transform:scale(15);
+                            opacity:0;
+                        }
                     }"
                     data-js="">
                     Live Preview

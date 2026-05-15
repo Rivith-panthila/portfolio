@@ -55,7 +55,7 @@ function openTab(evt, tabName) {
 
 
 // project card
-// --- Projects Slider Logic ---
+
 
 let currentIndex = 0; 
 const cards = document.querySelectorAll('.project-card');
